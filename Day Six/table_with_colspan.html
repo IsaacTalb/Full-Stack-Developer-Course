@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table in HTML</title>
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse; /* Ensures borders don't overlap */
+        }
+
+        th, td {
+            border: 1px solid black; /* Black border for each cell */
+            padding: 8px;
+            text-align: left;
+        }
+
+        tr {
+            border: 1px solid black; /* Black border for each row */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <table>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th colspan="2">Full Name</th> <!-- Full Name split into two columns -->
+                <th>Position</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Bill</td> <!-- First Name -->
+                <td>Gates</td> <!-- Last Name -->
+                <td>Founder Microsoft</td>
+                <td>$1000</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td colspan="2">Steve Jobs</td> <!-- Keep the rest in one cell -->
+                <td>Founder Apple</td>
+                <td>$1200</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td colspan="2">Larry Page</td>
+                <td>Founder Google</td>
+                <td>$1100</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td colspan="2">Mark Zuckerberg</td>
+                <td>Founder Facebook</td>
+                <td>$1300</td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+</body>
+</html>
