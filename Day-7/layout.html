@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Sidebars</title>
+    <style>
+        * {
+            color: white;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, footer {
+            background-color: rgb(119, 175, 173);
+            padding: 10px;
+            text-align: center;
+        }
+
+        main, .left_sidebar, .right_sidebar {
+            padding: 10px;
+            color: white;
+        }
+
+        h1, h5, h6 {
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+
+        .left_sidebar, .right_sidebar {
+            background-color: black;
+            flex: 1;
+            max-width: 20%;
+            min-width: 200px; /* Sidebar minimum width */
+            margin: 10px;
+        }
+
+        main {
+            background-color: rgb(162, 183, 127);
+            flex: 2;
+            min-width: 300px; /* Main section minimum width */
+            margin: 10px;
+            text-align: center;
+            height: 500px;
+        }
+
+        footer {
+            margin: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .left_sidebar, .right_sidebar {
+                max-width: 100%; /* Sidebars take full width */
+                flex-basis: 100%; /* Sidebars stack on top of each other */
+            }
+
+            main {
+                flex-basis: 100%; /* Main takes full width */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>This is header</h1>
+    </header>
+
+    <div class="container">
+        <aside class="left_sidebar">
+            <h5>This is Left-sidebar</h5>
+        </aside>
+
+        <main>
+            <h5>This is main section</h5>
+        </main>
+
+        <aside class="right_sidebar">
+            <h5>This is Right-sidebar</h5>
+        </aside>
+    </div>
+
+    <footer>
+        <h6>This is footer</h6>
+    </footer>
+    
+</body>
+</html>

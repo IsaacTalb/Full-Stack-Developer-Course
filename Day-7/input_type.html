@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection Form</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin: 15px 0;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #4cae4c;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Select Your Course</h2>
+        <form action="/submit-course" method="POST">
+            <div class="form-group">
+                <label>Choose your course:</label> <br>
+                <input type="checkbox" id="web-dev" name="course" value="Web Development">
+                <label for="web-dev">Web Development</label><br>
+
+                <input type="checkbox" id="data-science" name="course" value="Data Science">
+                <label for="data-science">Data Science</label><br>
+
+                <input type="checkbox" id="ai" name="course" value="Artificial Intelligence">
+                <label for="ai">Artificial Intelligence</label><br>
+
+                <input type="checkbox" id="cyber-security" name="course" value="Cyber Security">
+                <label for="cyber-security">Cyber Security</label>
+            </div>
+            
+
+            <button type="submit" class="submit-btn">Submit</button> <a href="">this is a link</a>
+        </form>
+    </div>
+
+</body>
+</html>
