@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+        }
+        .nested-child {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        /* .container > p {
+            color: red;
+        } */
+
+        /* combinator & direct child */
+
+        /* .container p {
+            color: red;
+        } */
+
+        .container, p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>This is heading (Parent) </h1>
+        <p>This is paragraph (child)</p>
+        <div class="nested-child">
+            <p>Nested Child Paragraph</p>
+        </div>
+        <p>THis is paragraph too</p>
+    </div>
+    <h3>This is heading</h3>
+    <p>This is paragraph</p>
+</body>
+</html>
