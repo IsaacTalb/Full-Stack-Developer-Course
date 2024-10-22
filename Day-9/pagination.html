@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination with Active Background Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .pagination {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .page-item {
+            margin: 0 5px;
+        }
+
+        .page-item a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .page-item a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .page-item a.active {
+            background-color: #28a745; /* Set the background color for active state */
+            color: white;
+            border: 1px solid #28a745;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a href="#item1" onclick="setActive(event, this)">1</a></li>
+            <li class="page-item"><a href="#item2" onclick="setActive(event, this)">2</a></li>
+            <li class="page-item"><a href="#item3" onclick="setActive(event, this)">3</a></li>
+            <li class="page-item"><a href="./sample_web_page_with_menu_toggle.html" target="_blank">Next Page</a></li>
+
+        </ul>
+    </nav>
+    
+
+    <div id="item1" style="display: none; background-color: rgb(203, 128, 128); color: white; height: 400px;">
+        This is item 1
+    </div>
+    <div id="item2" style="display: none; background-color: rgb(59, 179, 95); color: white; height: 400px;">
+        This is item 2
+    </div>
+    <div id="item3" style="display: none; background-color: rgb(152, 185, 217); color: white; height: 400px;">
+        This is item 3
+    </div>
+
+    <script>
+        function setActive(event, clickedLink) {
+            // Prevent default link behavior (prevent page reload)
+            event.preventDefault();
+
+            // Remove 'active' class from all pagination links
+            const allLinks = document.querySelectorAll('.pagination a');
+            allLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked link
+            clickedLink.classList.add('active');
+
+            // Hide all items
+            const items = document.querySelectorAll('div[id^="item"]');
+            items.forEach(item => {
+                item.style.display = 'none';
+            });
+
+            // Show the selected item
+            const selectedItem = document.querySelector(clickedLink.getAttribute('href'));
+            selectedItem.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

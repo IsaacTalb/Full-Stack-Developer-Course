@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex on HTML, CSS</title>
+    <style>
+       .flex-column ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+       .flex-column ul li{
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        .flex-column {
+            background-color: rgb(26, 32, 32);
+            width: 120px;
+            color: white;
+        }
+
+        /* flex column ended here!! */
+
+        .flex-row ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+       .flex-row ul li{
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        .flex-row {
+            background-color: rgb(26, 32, 32);
+            width: 250px;
+            color: white;
+        }
+
+        /* flex row ended here!! */
+
+        .column-reverse {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .column-reverse div {
+            background-color: rgb(26, 32, 32);
+            color: white;
+            margin: 5px;
+            width: 70px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* column-reverse ended here */
+
+        .row-reverse {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .row-reverse div {
+            background-color: rgb(26, 32, 32);
+            color: white;
+            margin: 5px;
+            width: fit-content;
+            padding: 10px;
+        }
+
+        /* row-reverse ended here */
+
+        .flex-wrap-properties {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-wrap-properties div {
+            background-color: black;
+            color: white;
+            width: 20px;
+            padding : 10px;
+            margin: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h4>This is flex column</h4>
+    <div class="flex-column">
+        <ul>
+            <li>item1</li>
+            <li>item3</li>
+            <li>item3</li>
+        </ul>
+    </div>
+
+    <br><hr>
+
+    <h4>This is flex row</h4>
+    <div class="flex-row">
+        <ul>
+            <li>item1</li>
+            <li>item3</li>
+            <li>item3</li>
+        </ul>
+    </div>
+
+    <br><hr>
+
+
+    <h5> This is Column Reverse</h5>
+    <div class="column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>This is 3</div>  
+    </div>
+
+    <br><hr>
+
+    <h4>This is Row Reverse</h4>
+
+    <div class="row-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+    </div>
+
+    <br><hr>
+
+    <h4> This is Flex Wrap Properties</h4>
+
+    <div class="flex-wrap-properties">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>  
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>  
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>  
+      </div>
+
+</body>
+</html>
