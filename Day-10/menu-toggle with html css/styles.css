@@ -1,77 +1,74 @@
-/* Reset styles */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
 }
 
-header {
-    background-color: #333;
-    padding: 10px 20px;
-}
-
-/* Hide the checkbox (used for toggling the menu) */
-.menu-toggle {
+h1 {
     display: none;
 }
 
-/* Style for the hamburger icon */
-.hamburger {
-    cursor: pointer;
-    display: block;
-    width: 30px;
-    height: 25px;
-    position: relative;
+.menu-toggle{
+    display: none;
 }
 
-.hamburger span {
+.hamburger{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburger span{
     background-color: white;
     display: block;
     height: 3px;
+    width: 60px;
     margin: 5px 0;
-    transition: 0.3s ease;
+    transition: 0.3s ease-in-out;
 }
 
-/* Hide the navigation menu initially */
 .menu {
     display: none;
 }
 
-/* Show the menu when the checkbox is checked */
 .menu-toggle:checked + .hamburger + .menu {
     display: block;
 }
 
-/* Navigation menu styling */
-.menu ul {
-    display: flex;
-
+.menu ul{
     list-style-type: none;
-    padding: 10px;
-    background-color: #333;
+    display: flex;
+    padding: 12px;
+    background-color: #ddd6d6;
     text-align: center;
+    justify-content: center;
 }
 
-.menu ul li a {
-    color: white;
+.menu ul li a{
+    color: black;
     text-decoration: none;
     padding: 10px;
     display: block;
+    margin: 0 5px;
+    border-radius: 5px;
 }
 
-.menu ul li a:hover {
-    background-color: #444;
+.menu ul li a:hover{
+    background-color: rgb(66, 64, 64);
+    color: white;
+    transition: 0.5s ease-in-out;
 }
 
-/* Hamburger icon animation when checked */
 .menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg);
-    top: 8px;
 }
 
 .menu-toggle:checked + .hamburger span:nth-child(2) {
@@ -80,7 +77,10 @@ header {
 
 .menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg);
-    top: -8px;
+}
+
+.menu-toggle:checked + .hamburger {
+    margin-top: 60px;
 }
 
 @media (min-width: 768px) {
@@ -90,12 +90,6 @@ header {
 
     .menu {
         display: block;
-    }
-
-    .menu ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 }
 
@@ -111,25 +105,33 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    h1 {
+        display: block;
+    }
+}
 
-/* Main Content */
 main {
     padding: 20px;
-}
-
-.content {
-    max-width: 1200px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
     color: white;
+}
+
+footer {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px 0;
+    color: rgb(255, 255, 255);
     position: absolute;
-    width: 100%;
     bottom: 0;
+    
+}
+
+.footer-content p {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
