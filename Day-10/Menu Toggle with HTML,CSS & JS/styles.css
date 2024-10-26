@@ -1,0 +1,118 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.menu {
+    display: none;
+}
+
+/* Position hamburger button in the top-right */
+.hamburger {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    z-index: 3; /* Ensure it stays above the menu */
+}
+
+/* Hamburger lines */
+.hamburger span {
+    background-color: #333;
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.3s ease;
+}
+
+/* Change hamburger icon color when menu is open */
+.menu-open .hamburger span {
+    background-color: rgb(189, 20, 20); /* Change to white when menu is open */
+}
+
+/* Make the navigation menu cover the whole screen when open */
+.menu-open .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.9); /* Add semi-transparent background */
+    z-index: 1;
+    padding-top: 60px; /* Space for the hamburger button */
+}
+
+/* Center the navigation items vertically */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.menu ul li a:hover {
+    color: #ddd;
+}
+
+/* Transform hamburger icon to "X" when clicked */
+.menu-open .hamburger span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+}
+
+.menu-open .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .hamburger span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
