@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        #counter{
+            font-size: 45px;
+        }
+
+        #incrementButton{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Counter</h1>
+    <div id="counter">0</div>
+    <br>
+    <button id="incrementButton">
+        Increment
+    </button>
+
+
+    <script>
+        let counter = 0;
+
+        const counterDisplay = document.getElementById("counter");
+        const incrementButton = document.getElementById("incrementButton");
+
+        incrementButton.addEventListener("click", function(){
+            counter++;
+            counterDisplay.innerHTML = counter;
+        })
+    </script>
+
+
+
+    
+</body>
+</html>

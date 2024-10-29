@@ -1,3 +1,6 @@
 function ExterChange() {
-    document.getElementById("demo").innerHTML = "Paragraph changed in external way.";
+    document.getElementById("demo").innerHTML =
+     "Paragraph changed in external way.";
+
+    alert("External JS");
 }
