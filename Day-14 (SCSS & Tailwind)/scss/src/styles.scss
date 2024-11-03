@@ -1,0 +1,33 @@
+$primary-color: #ffffff;
+$secondary-color: #adf908;
+$third-color: #ef0808;
+$fourth-color: black;
+$primary-font: Courier, monospace;
+$primary-font-size: 14px;
+
+
+body {
+    color: $primary-color;
+    background-color:   $fourth-color;
+    font-family: $primary-font;
+    font-size: $primary-font-size;
+}
+
+.contaier {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.title {
+    color: $secondary-color;
+    font-size: 24px;
+}
+
+section {
+    margin: 20px 0;
+    background-color: $primary-color;
+}
+
+.para-class p {
+    color: $fourth-color;
+}

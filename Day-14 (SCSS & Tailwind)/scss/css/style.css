@@ -1,0 +1,27 @@
+body {
+  color: #ffffff;
+  background-color: black;
+  font-family: Courier, monospace;
+  font-size: 14px;
+}
+
+.contaier {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #adf908;
+  font-size: 24px;
+}
+
+section {
+  margin: 20px 0;
+  background-color: #ffffff;
+}
+
+.para-class p {
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
