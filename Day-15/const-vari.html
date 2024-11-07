@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Const Redeclaration Example</title>
+</head>
+<body>
+  <h1>Const Redeclaration Example</h1>
+
+  <script>
+    var x = 2;
+    console.log("Global x:", x); // Output: Global x: 2
+
+    {
+      var x = 3;
+      console.log("Block 1 x:", x); // Output: Block 1 x: 3
+    }
+
+    {
+      var x = 4;
+      console.log("Block 2 x:", x); // Output: Block 2 x: 4
+    }
+
+    console.log("Global x after blocks:", x); // Output: Global x after blocks: 2
+  </script>
+</body>
+</html>
